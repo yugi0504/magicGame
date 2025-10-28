@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Collider">
+      <UniqueIdentifier>{4e113239-1014-4f9e-b241-5e8746136f2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collider\Interface">
+      <UniqueIdentifier>{ef2571a1-daa0-475c-8166-03c6a9e2d73f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collider\Capsule">
+      <UniqueIdentifier>{0b05f077-a242-4b79-b7f1-f6772ae9b9a4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Capsule.cpp">
+      <Filter>Collider\Capsule</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ICollider.hpp">
+      <Filter>Collider\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="Capsule.h">
+      <Filter>Collider\Capsule</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

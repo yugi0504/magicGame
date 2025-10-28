@@ -1,0 +1,98 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{22D4ED4C-611D-4D21-B6D9-87A7FE99275D}|CreateMagics\\CreateMagics.vcxproj|C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\Capsule.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22D4ED4C-611D-4D21-B6D9-87A7FE99275D}|CreateMagics\\CreateMagics.vcxproj|solutionrelative:CreateMagics\\Capsule.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D4ED4C-611D-4D21-B6D9-87A7FE99275D}|CreateMagics\\CreateMagics.vcxproj|C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\ICollider.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22D4ED4C-611D-4D21-B6D9-87A7FE99275D}|CreateMagics\\CreateMagics.vcxproj|solutionrelative:CreateMagics\\ICollider.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D4ED4C-611D-4D21-B6D9-87A7FE99275D}|CreateMagics\\CreateMagics.vcxproj|C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\Capsule.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22D4ED4C-611D-4D21-B6D9-87A7FE99275D}|CreateMagics\\CreateMagics.vcxproj|solutionrelative:CreateMagics\\Capsule.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{22D4ED4C-611D-4D21-B6D9-87A7FE99275D}|CreateMagics\\CreateMagics.vcxproj|C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{22D4ED4C-611D-4D21-B6D9-87A7FE99275D}|CreateMagics\\CreateMagics.vcxproj|solutionrelative:CreateMagics\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Capsule.cpp",
+              "DocumentMoniker": "C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\Capsule.cpp",
+              "RelativeDocumentMoniker": "CreateMagics\\Capsule.cpp",
+              "ToolTip": "C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\Capsule.cpp",
+              "RelativeToolTip": "CreateMagics\\Capsule.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-28T10:07:40.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ICollider.hpp",
+              "DocumentMoniker": "C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\ICollider.hpp",
+              "RelativeDocumentMoniker": "CreateMagics\\ICollider.hpp",
+              "ToolTip": "C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\ICollider.hpp",
+              "RelativeToolTip": "CreateMagics\\ICollider.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-28T09:51:53.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\main.cpp",
+              "RelativeDocumentMoniker": "CreateMagics\\main.cpp",
+              "ToolTip": "C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\main.cpp",
+              "RelativeToolTip": "CreateMagics\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-10-28T09:41:00.813Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Capsule.h",
+              "DocumentMoniker": "C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\Capsule.h",
+              "RelativeDocumentMoniker": "CreateMagics\\Capsule.h",
+              "ToolTip": "C:\\Users\\student\\Desktop\\magicGame\\CreateMagics\\CreateMagics\\Capsule.h",
+              "RelativeToolTip": "CreateMagics\\Capsule.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-10-28T10:07:24.562Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
