@@ -45,6 +45,18 @@ public:
 	/// @brief 描画
 	void Draw() const override;
 
+	/// <summary>
+	/// カプセル vs カプセルの貫通解消ベクトルを計算
+	/// </summary>
+	/// <param name="other">相手カプセル</param>
+	/// <param name="outNormal">押し戻し法線</param>
+	/// <param name="outDepth">重なり量</param>
+	/// <param name="outPointA">Aの最近点</param>
+	/// <param name="outPointB">Bの最近点</param>
+	/// <returns>衝突判定</returns>
+	bool ComputePenetrationCapsuleCapsule(const CapsuleCollider& other, VECTOR& outNormal, float& outDepth, VECTOR& outPointA, VECTOR& outPointB) const;
+
+
 	// ----- 参照用関数 -----
 	VECTOR GetP0() const;		// 下端点
 
@@ -75,5 +87,8 @@ private:
 	/// @param max 最大値
 	/// @return 実際の値
 	float Clamp(float value, float min, float max) const;
+
+	float SegmentSegmentClosestPoints(const VECTOR& p0, const VECTOR& p1, const VECTOR& q0, const VECTOR& q1, float& outS, float& outT, VECTOR& outClosestP, VECTOR& outClosestQ) const;
+
 
 };

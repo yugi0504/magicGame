@@ -39,7 +39,27 @@ void CapsuleCollider::Draw() const
 	DrawCapsule3D(m_p0, m_p1, m_worldRadius, DIVNUM, DEBUG_DIFCOLOR, DEBUG_SPCCOLOR,FALSE);
 }
 
+bool CapsuleCollider::ComputePenetrationCapsuleCapsule(const CapsuleCollider& other, VECTOR& outNormal, float& outDepth, VECTOR& outPointA, VECTOR& outPointB) const
+{
+	const VECTOR
+}
+
 // ----- éQè∆ópä÷êî -----
+
+VECTOR CapsuleCollider::GetP0() const
+{
+	return m_p0;
+}
+
+VECTOR CapsuleCollider::GetP1() const
+{
+	return m_p1;
+}
+
+float CapsuleCollider::GetRadius() const
+{
+	return m_worldRadius;
+}
 
 
 // ----- ì‡ïîä÷êî -----
