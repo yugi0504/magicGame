@@ -35,7 +35,7 @@
     <ClInclude Include="ICollider.hpp">
       <Filter>Collider\Interface</Filter>
     </ClInclude>
-    <ClInclude Include="Capsule.h">
+    <ClInclude Include="Capsule.hpp">
       <Filter>Collider\Capsule</Filter>
     </ClInclude>
   </ItemGroup>
