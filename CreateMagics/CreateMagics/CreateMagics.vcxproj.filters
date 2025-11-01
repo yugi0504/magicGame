@@ -22,6 +22,12 @@
     <Filter Include="Collider\Capsule">
       <UniqueIdentifier>{0b05f077-a242-4b79-b7f1-f6772ae9b9a4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Move">
+      <UniqueIdentifier>{a8cccfef-8043-4cef-b421-3576cc310202}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{9a016435-299c-41fe-8d0a-4003b0cd2d07}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -30,6 +36,12 @@
     <ClCompile Include="Capsule.cpp">
       <Filter>Collider\Capsule</Filter>
     </ClCompile>
+    <ClCompile Include="Move.cpp">
+      <Filter>Move</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ICollider.hpp">
@@ -37,6 +49,15 @@
     </ClInclude>
     <ClInclude Include="Capsule.hpp">
       <Filter>Collider\Capsule</Filter>
+    </ClInclude>
+    <ClInclude Include="Move.hpp">
+      <Filter>Move</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.hpp">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
