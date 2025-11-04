@@ -41,7 +41,61 @@ void CapsuleCollider::Draw() const
 
 bool CapsuleCollider::ComputePenetrationCapsuleCapsule(const CapsuleCollider& other, VECTOR& outNormal, float& outDepth, VECTOR& outPointA, VECTOR& outPointB) const
 {
-	const VECTOR
+	float s = MIN_VALUE, t = MIN_VALUE;
+	VECTOR cpA, cpB;
+
+	const float distSq = SegmentSegmentClosestPoints(m_p0, m_p1, other.m_p0, other.m_p1, s, t, cpA, cpB);
+
+	const float rSum = m_worldRadius + other.m_worldRadius;
+
+	// 実距離
+	float dist = sqrtf(max(distSq, MIN_VALUE));
+
+	if (dist >= rSum)
+	{
+		// 貫通していない
+		outDepth = MIN_VALUE;
+		outNormal = VGet(0, 0, 0);
+		outPointA = cpA;
+		outPointB = cpB;
+		return false;
+	}
+
+	// 法線方向
+	VECTOR n = VSub(cpB, cpA);
+	float nLenSq = VSquareSize(n);
+
+	if (nLenSq <= EPSILON)
+	{
+		VECTOR aAxis = VSub(m_p1, m_p0);
+		VECTOR bAxis = VSub(other.m_p1, other.m_p0);
+
+		// 軸の差分方向
+		n = VSub(bAxis, aAxis);
+
+		if (VSquareSize(n) <= EPSILON)
+		{
+			// ｙ軸に退避
+			n = VGet(0, 1, 0);
+		}
+
+		n = VNorm(n);
+		dist = MIN_VALUE;	// ほぼ一致
+	}
+	else
+	{
+		n = VScale(n, MAX_VALUE / sqrtf(nLenSq));
+	}
+
+	// 重なり量
+	const float depth = rSum - dist;
+
+	outNormal = n;		// 単位法線
+	outDepth = depth;	// 正の重なり
+	outPointA = cpA;
+	outPointB = cpB;
+
+	return true;
 }
 
 // ----- 参照用関数 -----
@@ -147,6 +201,78 @@ float CapsuleCollider::SegmentSegmentDistSq(const VECTOR& p0, const VECTOR& p1, 
 	VECTOR closestP = VAdd(p0, VScale(d1, s));
 	VECTOR closestQ = VAdd(q0, VScale(d2, t));
 	return VSquareSize(VSub(closestP, closestQ));
+}
+
+float CapsuleCollider::SegmentSegmentClosestPoints(const VECTOR& p0, const VECTOR& p1, const VECTOR& q0, const VECTOR& q1, float& outS, float& outT, VECTOR& outClosestP, VECTOR& outClosestQ) const
+{
+	const VECTOR d1 = VSub(p1, p0);
+	const VECTOR d2 = VSub(q1, q0);
+	const VECTOR r = VSub(p0, q0);
+
+	const float a = VDot(d1, d1);
+	const float e = VDot(d2, d2);
+	const float f = VDot(d2, r);
+
+	float s, t;
+
+	if (a <= EPSILON && e <= EPSILON)
+	{
+		// 両方とも「点」
+		outClosestP = p0;
+		outClosestQ = q0;
+		outS = 0.0f; outT = 0.0f;
+		return VSquareSize(VSub(outClosestP, outClosestQ));
+	}
+
+	if (a <= EPSILON)
+	{
+		// pが点
+		s = 0.0f;
+		t = Clamp(f / e, 0.0f, 1.0f);
+	}
+	else
+	{
+		const float c = VDot(d1, r);
+		if (e <= EPSILON)
+		{
+			// qが点
+			t = 0.0f;
+			s = Clamp(-c / a, 0.0f, 1.0f);
+		}
+		else
+		{
+			const float b = VDot(d1, d2);
+			const float denom = a * e - b * b;
+
+			if (fabsf(denom) > EPSILON)
+			{
+				s = Clamp((b * f - c * e) / denom, 0.0f, 1.0f);
+			}
+			else
+			{
+				// ほぼ平行
+				s = 0.0f;
+			}
+
+			t = (b * s + f) / e;
+
+			if (t < 0.0f)
+			{
+				t = 0.0f;
+				s = Clamp(-c / a, 0.0f, 1.0f);
+			}
+			else if (t > 1.0f)
+			{
+				t = 1.0f;
+				s = Clamp((b - c) / a, 0.0f, 1.0f);
+			}
+		}
+	}
+
+	outClosestP = VAdd(p0, VScale(d1, s));
+	outClosestQ = VAdd(q0, VScale(d2, t));
+	outS = s; outT = t;
+	return VSquareSize(VSub(outClosestP, outClosestQ));
 }
 
 float CapsuleCollider::Clamp(float value, float min, float max) const

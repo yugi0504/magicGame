@@ -1,6 +1,8 @@
 #pragma once
 #include "DxLib.h"
 #include "Input.hpp"
+#include "Camera.hpp"
+#include "Time.hpp"
 
 class Move
 {
@@ -20,7 +22,7 @@ public:
 
 	/// @brief プレイヤーの移動更新
 	/// @param forward 正規化したカメラ前方向
-	void	PlayerUpdate	(const VECTOR&forward, float deltaTime);
+	void	PlayerUpdate	(const Camera& cam);
 
 	// ----- 参照用関数 -------
 	VECTOR	GetPosition		() const;

@@ -4,10 +4,10 @@ Move::Move() :m_position(INIT_VECTOR), m_speed(0.5f){}
 
 Move::Move(const VECTOR& startPos,float speed):m_position(startPos),m_speed(speed){}
 
-void Move::PlayerUpdate(const VECTOR&forward, float deltaTime)
+void Move::PlayerUpdate(const Camera& cam)
 {
-	VECTOR right = VCross(UP_VECTOR, forward);
-	right = VNorm(right);
+	VECTOR forward = cam.GetForward();
+	VECTOR right = cam.GetRight();
 
 	VECTOR moveDir = INIT_VECTOR;
 
@@ -19,7 +19,7 @@ void Move::PlayerUpdate(const VECTOR&forward, float deltaTime)
 	if (VSquareSize(moveDir) > EPSILON)
 	{
 		moveDir = VNorm(moveDir);
-		m_position = VAdd(m_position, VScale(moveDir, m_speed * deltaTime));
+		m_position = VAdd(m_position, VScale(moveDir, m_speed * Time::GetInstance().DeltaTime()));
 	}
 }
 
