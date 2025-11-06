@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="リソース ファイル">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
@@ -34,6 +30,16 @@
     <Filter Include="Time">
       <UniqueIdentifier>{77ea74d1-b2d2-4a31-830f-18b556726e09}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Character">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Character\Status">
+      <UniqueIdentifier>{295658d5-fb67-43c8-abd9-dc2514189837}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Character\base">
+      <UniqueIdentifier>{f8a9f193-de9c-48ba-83e8-238a15b8c71d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="Time.cpp">
       <Filter>Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Status.cpp">
+      <Filter>Character\Status</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -74,8 +83,11 @@
     <ClInclude Include="Time.hpp">
       <Filter>Time</Filter>
     </ClInclude>
-    <ClInclude Include="ICharacter.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="Character.h">
+      <Filter>Character\base</Filter>
+    </ClInclude>
+    <ClInclude Include="Status.hpp">
+      <Filter>Character\Status</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
