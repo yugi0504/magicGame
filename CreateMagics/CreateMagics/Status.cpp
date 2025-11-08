@@ -43,3 +43,36 @@ bool Status::UseMP(int value)
 	m_mp -= max(0, m_mp - value);
 	return true;
 }
+
+void Status::RecoverMP(int value)
+{
+	m_mp = min(m_mpMax, m_mp + value);
+}
+
+void Status::SetMax(int hpMax, int mpMax)
+{
+	m_hpMax = hpMax;
+	m_mpMax = mpMax;
+	m_hp = hpMax;
+	m_mp = mpMax;
+}
+
+int Status::GetHP() const
+{
+	return m_hp;
+}
+
+int Status::GetMP() const
+{
+	return m_mp;
+}
+
+int Status::GetHPMax() const
+{
+	return m_hpMax;
+}
+
+int Status::GetMPMax() const
+{
+	return m_mpMax;
+}

@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Capsule.cpp" />
+    <ClCompile Include="Character.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Move.cpp" />
@@ -154,7 +155,7 @@
   <ItemGroup>
     <ClInclude Include="Camera.hpp" />
     <ClInclude Include="Capsule.hpp" />
-    <ClInclude Include="Character.h" />
+    <ClInclude Include="Character.hpp" />
     <ClInclude Include="ICollider.hpp" />
     <ClInclude Include="Input.hpp" />
     <ClInclude Include="Move.hpp" />

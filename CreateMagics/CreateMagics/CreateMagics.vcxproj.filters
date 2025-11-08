@@ -63,6 +63,9 @@
     <ClCompile Include="Status.cpp">
       <Filter>Character\Status</Filter>
     </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Character\base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ICollider.hpp">
@@ -83,7 +86,7 @@
     <ClInclude Include="Time.hpp">
       <Filter>Time</Filter>
     </ClInclude>
-    <ClInclude Include="Character.h">
+    <ClInclude Include="Character.hpp">
       <Filter>Character\base</Filter>
     </ClInclude>
     <ClInclude Include="Status.hpp">
