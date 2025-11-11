@@ -40,6 +40,9 @@
     <Filter Include="Character\base">
       <UniqueIdentifier>{f8a9f193-de9c-48ba-83e8-238a15b8c71d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Character\Player">
+      <UniqueIdentifier>{fb87e74f-ef5a-4425-9ad4-de2fc7aad7f8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -66,6 +69,9 @@
     <ClCompile Include="Character.cpp">
       <Filter>Character\base</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Character\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ICollider.hpp">
@@ -91,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="Status.hpp">
       <Filter>Character\Status</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.hpp">
+      <Filter>Character\Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

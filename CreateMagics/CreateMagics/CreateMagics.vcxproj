@@ -149,6 +149,7 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Move.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Status.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
@@ -159,6 +160,7 @@
     <ClInclude Include="ICollider.hpp" />
     <ClInclude Include="Input.hpp" />
     <ClInclude Include="Move.hpp" />
+    <ClInclude Include="Player.hpp" />
     <ClInclude Include="Status.hpp" />
     <ClInclude Include="Time.hpp" />
   </ItemGroup>
