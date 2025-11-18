@@ -20,5 +20,36 @@ void Player::Initialize(const VECTOR& startPos, float moveSpeed, float capsuleHa
 
 void Player::Update(float deltaTime)
 {
-	
+	if (m_camera)
+	{
+		m_move.PlayerUpdate(*m_camera);
+	}
+
+	SetPosition(m_move.GetPosition());
+
+	Character::Update(deltaTime);
+
+	if (m_camera)
+	{
+		m_camera->SetTarget(GetPosition());
+	}
+
+	// ”í’eˆ—‚âUŒ‚ˆ—@’Ç‰Á‚Í‚±‚¿‚ç
+
+}
+
+void Player::Draw() const
+{
+	Character::Draw();
+}
+
+void Player::SetMoveSpeed(float speed)
+{
+	m_moveSpeed = speed;
+	m_move.SetSpeed(speed);
+}
+
+float Player::GetMoveSpeed() const
+{
+	return m_moveSpeed;
 }

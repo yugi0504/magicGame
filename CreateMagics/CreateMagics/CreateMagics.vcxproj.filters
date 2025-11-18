@@ -43,6 +43,9 @@
     <Filter Include="Character\Player">
       <UniqueIdentifier>{fb87e74f-ef5a-4425-9ad4-de2fc7aad7f8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="bullet">
+      <UniqueIdentifier>{79c01d41-453a-4f6a-8e06-71bc0f8bf922}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -72,6 +75,9 @@
     <ClCompile Include="Player.cpp">
       <Filter>Character\Player</Filter>
     </ClCompile>
+    <ClCompile Include="bullet.cpp">
+      <Filter>bullet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ICollider.hpp">
@@ -100,6 +106,9 @@
     </ClInclude>
     <ClInclude Include="Player.hpp">
       <Filter>Character\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="bullet.hpp">
+      <Filter>bullet</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
