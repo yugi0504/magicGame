@@ -43,6 +43,11 @@ void Player::Draw() const
 	Character::Draw();
 }
 
+void Player::AttachCamera(Camera* cam)
+{
+	m_camera = cam;
+}
+
 void Player::SetMoveSpeed(float speed)
 {
 	m_moveSpeed = speed;

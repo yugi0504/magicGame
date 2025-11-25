@@ -26,7 +26,7 @@ private:
 
 public:
 	Camera() = default;
-	explicit Camera(const Settings cfg);
+	Camera(const Settings cfg);
 
 	void InitializeMouseLock();
 
@@ -36,6 +36,7 @@ public:
 	void SetTarget(const VECTOR& target);
 	void SetAngle(float yaw, float pitch);
 	void SetDistance(float distance);
+	void SetSettings(const Settings& s);
 
 	float GetYaw()const;
 	float GetPitch() const;

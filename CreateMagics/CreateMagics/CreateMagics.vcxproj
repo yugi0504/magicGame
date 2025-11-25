@@ -143,10 +143,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="bullet.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Capsule.cpp" />
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Move.cpp" />
@@ -155,10 +156,12 @@
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="bullet.hpp" />
+    <ClInclude Include="Bullet.hpp" />
+    <ClInclude Include="BulletOwner.hpp" />
     <ClInclude Include="Camera.hpp" />
     <ClInclude Include="Capsule.hpp" />
     <ClInclude Include="Character.hpp" />
+    <ClInclude Include="Game.hpp" />
     <ClInclude Include="ICollider.hpp" />
     <ClInclude Include="Input.hpp" />
     <ClInclude Include="Move.hpp" />

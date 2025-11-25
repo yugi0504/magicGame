@@ -15,6 +15,9 @@ void Character::Draw() const
 
 bool Character::OnHit(int damage, float invSecond)
 {
+	if (m_status.IsInvincible())
+		return false;
+
 	bool applied = m_status.Damage(damage);
 
 	if (applied)

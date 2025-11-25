@@ -65,3 +65,33 @@ void Bullet::Draw() const
 		m_collider->Draw();
 	}
 }
+
+bool Bullet::IsAlive() const
+{
+	return m_alive;
+}
+
+void Bullet::Kill()
+{
+	m_alive = false;
+}
+
+ICollider* Bullet::GetCollider() const
+{
+	return m_collider.get();
+}
+
+BulletOwner Bullet::GetOwner() const
+{
+	return m_owner;
+}
+
+int Bullet::GetDamage()const
+{
+	return m_damage;
+}
+
+const VECTOR& Bullet::GetPosition() const
+{
+	return m_position;
+}

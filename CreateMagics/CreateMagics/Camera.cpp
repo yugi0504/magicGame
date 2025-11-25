@@ -70,6 +70,11 @@ void Camera::SetTarget(const VECTOR& target)
 	m_target = target;
 }
 
+void Camera::SetSettings(const Settings& s)
+{
+	m_cfg = s;
+}
+
 float Camera::GetYaw() const
 {
 	return m_yaw;

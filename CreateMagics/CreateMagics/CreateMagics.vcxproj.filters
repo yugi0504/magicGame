@@ -46,6 +46,9 @@
     <Filter Include="bullet">
       <UniqueIdentifier>{79c01d41-453a-4f6a-8e06-71bc0f8bf922}</UniqueIdentifier>
     </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{813a0508-c21a-406b-8e9a-be8287511243}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -75,8 +78,11 @@
     <ClCompile Include="Player.cpp">
       <Filter>Character\Player</Filter>
     </ClCompile>
-    <ClCompile Include="bullet.cpp">
+    <ClCompile Include="Bullet.cpp">
       <Filter>bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -107,7 +113,13 @@
     <ClInclude Include="Player.hpp">
       <Filter>Character\Player</Filter>
     </ClInclude>
-    <ClInclude Include="bullet.hpp">
+    <ClInclude Include="Bullet.hpp">
+      <Filter>bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletOwner.hpp">
       <Filter>bullet</Filter>
     </ClInclude>
   </ItemGroup>

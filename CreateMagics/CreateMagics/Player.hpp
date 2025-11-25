@@ -9,7 +9,7 @@ class Player : public Character
 {
 private:
 	Move m_move;
-	float m_moveSpeed;
+	float m_moveSpeed = 5.0f;
 	Camera* m_camera = nullptr;
 
 public :
@@ -28,3 +28,4 @@ public :
 	float GetMoveSpeed() const;
 
 };
+

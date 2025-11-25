@@ -1,2 +1,17 @@
-﻿  Capsule.cpp
-  CreateMagics.vcxproj -> C:\Users\student\Desktop\magicGame\CreateMagics\x64\Debug\CreateMagics.exe
+﻿  Bullet.cpp
+  Camera.cpp
+C:\Users\student\Desktop\magicGame\CreateMagics\CreateMagics\bullet.hpp(33,76): error C2061: 構文エラー: 識別子 'Owner'
+  (ソース ファイル 'Bullet.cpp' をコンパイルしています)
+  
+C:\Users\student\Desktop\magicGame\CreateMagics\CreateMagics\Bullet.cpp(10,83): error C2061: 構文エラー: 識別子 'Owner'
+C:\Users\student\Desktop\magicGame\CreateMagics\CreateMagics\Bullet.cpp(26,12): error C2065: 'owner': 定義されていない識別子です。
+C:\Users\student\Desktop\magicGame\CreateMagics\CreateMagics\Bullet.cpp(27,15): error C2065: 'lifeTime': 定義されていない識別子です。
+C:\Users\student\Desktop\magicGame\CreateMagics\CreateMagics\Camera.cpp(68,14): error C2084: 関数 'void Camera::SetTarget(const DxLib::VECTOR &)' は既に本体を持っています。
+      C:\Users\student\Desktop\magicGame\CreateMagics\CreateMagics\Camera.cpp(52,14):
+      'Camera::SetTarget' の以前の定義を確認してください
+  
+  Character.cpp
+  Game.cpp
+  Player.cpp
+  Time.cpp
+  コードを生成中...
