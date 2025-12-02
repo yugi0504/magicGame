@@ -53,3 +53,46 @@ void GameManager::Update(float deltaTime)
 	m_camera.SetTarget(m_player.GetPosition());
 	m_camera.ApplyToCamera();
 }
+
+void GameManager::Draw()
+{
+	ClearDrawScreen();
+
+	m_player.Draw();
+	for (auto& e :/*enemy*/) e.Draw();
+	for (auto& b : m_bullets) b.Draw();
+
+	ScreenFlip();
+}
+
+void GameManager::UpdateBullets(float deltaTime)
+{
+	for (auto& b : m_bullets)
+	{
+		if (!b.IsAlive()) continue;
+
+		ICollider* bulletCol = b.GetCollider();
+
+		if (!bulletCol) continue;
+
+		if (b.GetOwner() == BulletOwner::Enemy)
+		{
+			ICollider* playerCol = m_player.GetCollider();
+
+			if (!playerCol) continue;
+
+			if (!m_player.GetStatus().IsInvincible() && playerCol->Intersects(*bulletCol))
+			{
+				m_player.OnHit(b.GetDamage(), 0.3f);
+				b.Kill();
+			}
+		}
+		else
+		{
+			for ()
+			{
+
+			}
+		}
+	}
+}

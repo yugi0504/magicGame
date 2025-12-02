@@ -49,6 +49,9 @@
     <Filter Include="game">
       <UniqueIdentifier>{813a0508-c21a-406b-8e9a-be8287511243}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Character\Enemy">
+      <UniqueIdentifier>{c286f581-521f-4db7-87ba-8def0e43517b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -121,6 +124,9 @@
     </ClInclude>
     <ClInclude Include="BulletOwner.hpp">
       <Filter>bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.hpp">
+      <Filter>Character\Enemy</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

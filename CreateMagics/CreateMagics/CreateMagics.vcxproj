@@ -161,6 +161,7 @@
     <ClInclude Include="Camera.hpp" />
     <ClInclude Include="Capsule.hpp" />
     <ClInclude Include="Character.hpp" />
+    <ClInclude Include="Enemy.hpp" />
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="ICollider.hpp" />
     <ClInclude Include="Input.hpp" />
