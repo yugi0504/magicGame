@@ -39,6 +39,8 @@ public:
 	bool IsDead() const;
 
 private:
-
+	
+	void UpdateAI(float deltaTime);
+	void ShootAtPlayer();
 
 };

@@ -87,6 +87,9 @@
     <ClCompile Include="Game.cpp">
       <Filter>game</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Character\Enemy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ICollider.hpp">
