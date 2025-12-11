@@ -18,6 +18,12 @@ bool GameManager::Initialize()
 	m_player.Initialize(VGet(0, 0, 0));
 	m_player.AttachCamera(&m_camera);
 
+	Enemy enemy;
+	enemy.Initialize(VGet(0, 0, 50));
+	enemy.SetPlayer(&m_player);
+	enemy.SetBulletList(&m_bullets);
+	m_enemies.push_back(enemy);
+
 	m_bullets.clear();
 
 	m_isRunning = true;
@@ -59,7 +65,7 @@ void GameManager::Draw()
 	ClearDrawScreen();
 
 	m_player.Draw();
-	for (auto& e :/*enemy*/) e.Draw();
+	for (auto& e :m_enemies ) e.Draw();
 	for (auto& b : m_bullets) b.Draw();
 
 	ScreenFlip();
@@ -67,6 +73,26 @@ void GameManager::Draw()
 
 void GameManager::UpdateBullets(float deltaTime)
 {
+	for (auto& b : m_bullets)
+	{
+		if (!b.IsAlive()) continue;
+		b.Update(deltaTime);
+	}
+
+	m_bullets.erase(
+		remove_if(m_bullets.begin(), m_bullets.end(),
+			[](const Bullet& b) {return !b.IsAlive(); }),
+			m_bullets.end());
+}
+
+void GameManager::CheckBulletHit()
+{
+
+	for(auto & b:m_bullets)
+	{
+
+	}
+
 	for (auto& b : m_bullets)
 	{
 		if (!b.IsAlive()) continue;
@@ -89,10 +115,20 @@ void GameManager::UpdateBullets(float deltaTime)
 		}
 		else
 		{
-			for ()
+			for (auto& e : m_enemies)
 			{
+				ICollider* enemyCol = e.GetCollider();
 
+				if (!enemyCol) continue;
+
+				if (enemyCol->Intersects(*bulletCol))
+				{
+					e.OnHit(b.GetDamage(), 0.0f);
+					b.Kill();
+					break;
+				}
 			}
+
 		}
 	}
 }

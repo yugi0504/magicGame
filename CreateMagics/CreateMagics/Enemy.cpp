@@ -58,6 +58,7 @@ void Enemy::Draw() const
 }
 
 void Enemy::UpdateAI(float deltaTime)
+
 {
 	if (!m_player) return;
 
@@ -71,6 +72,64 @@ void Enemy::UpdateAI(float deltaTime)
 	float chaseR2 = m_chaseRange * m_chaseRange;
 	float attackR2 = m_attackRange * m_attackRange;
 
+	VECTOR dir;
+
+	if (distSq > 1e-8f)
+	{
+		dir = VNorm(diff);
+	}
+	else
+	{
+		dir = VGet(0, 0, 0);
+	}
+
+	if (distSq > attackR2 && distSq < chaseR2)
+	{
+		VECTOR move = VScale(dir, m_moveSpeed * deltaTime);
+		myPos = VAdd(myPos, move);
+		SetPosition(myPos);
+	}
+	else
+	{
+		// ‹ß‹——£”»’è
+
+	}
 
 
+	m_attackTimer -= deltaTime;
+	if (m_attackTimer <= 0.0f)
+	{
+		if (distSq <= attackR2)
+		{
+			ShootAtPlayer();
+		}
+		m_attackTimer = m_attackInterval;
+	}
+
+
+}
+
+void Enemy::ShootAtPlayer()
+{
+	if (!m_player || !m_bullets) return;
+
+	VECTOR myPos = GetPosition();
+	VECTOR plPos = m_player->GetPosition();
+
+	VECTOR dir = VSub(plPos, myPos);
+
+	if (VSquareSize(dir) <= 1e-8f)
+	{
+		dir = VGet(0, 0, 1);
+	}
+	else
+	{
+		dir = VNorm(dir);
+	}
+
+	Bullet b;
+
+	b.Spawn(myPos, dir, 15.0f, 3, BulletOwner::Enemy, 5.0f);
+
+	m_bullets->push_back(b);
 }

@@ -3,6 +3,7 @@
 #include <vector>
 #include "Camera.hpp"
 #include "Player.hpp"
+#include "Enemy.hpp"
 #include "Bullet.hpp"
 #include "Time.hpp"
 
@@ -16,6 +17,7 @@ private:
 
 	Camera m_camera;
 	Player m_player;
+	vector<Enemy> m_enemies;
 	vector<Bullet> m_bullets;
 
 
