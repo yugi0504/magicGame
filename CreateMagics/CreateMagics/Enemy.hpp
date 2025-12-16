@@ -12,11 +12,11 @@ private:
 	Player* m_player = nullptr;
 	vector<Bullet>* m_bullets = nullptr;
 
-	float m_moveSpeed = 3.0f;
-	float m_chaseRange = 30.0f;
-	float m_attackRange = 15.0f;
-	float m_attackInterval = 2.0f;
-	float m_attackTimer = 0.0f;
+	float m_moveSpeed;
+	float m_chaseRange;
+	float m_attackRange;
+	float m_attackInterval;
+	float m_attackTimer;
 	
 
 public:

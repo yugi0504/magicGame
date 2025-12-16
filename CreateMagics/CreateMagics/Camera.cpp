@@ -65,11 +65,6 @@ void Camera::SetDistance(float distance)
 	m_cfg.distance = distance;
 }
 
-void Camera::SetTarget(const VECTOR& target)
-{
-	m_target = target;
-}
-
 void Camera::SetSettings(const Settings& s)
 {
 	m_cfg = s;

@@ -21,7 +21,11 @@ protected:
 	Status m_status;
 
 public:
+	Character(const Character&) = default;
 	virtual ~Character() = default;
+
+	Character(const Character&) = delete;
+	Character& operator = (Character&&) noexcept = delete;
 
 	virtual void Update(float deltaTime);
 

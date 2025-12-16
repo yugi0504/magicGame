@@ -7,10 +7,10 @@ Enemy::Enemy()
 
 void Enemy::Initialize(
 	const VECTOR& startPos,
-	float moveSpeed = 3.0f,
-	float chaseRange = 30.0f,
-	float attackRange = 15.0f,
-	float attackInterval = 2.0f)
+	float moveSpeed,
+	float chaseRange,
+	float attackRange,
+	float attackInterval)
 {
 	SetPosition(startPos);
 

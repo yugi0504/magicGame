@@ -7,7 +7,7 @@ Bullet::Bullet()
 	m_collider = make_unique<CapsuleCollider>(halfHeight, radius);
 }
 
-void Bullet::Spawn(const VECTOR& pos, const VECTOR& dir, float speed, int damage, Owner owner, float lifeTime)
+void Bullet::Spawn(const VECTOR& pos, const VECTOR& dir, float speed, int damage, BulletOwner owner, float lifeTime)
 {
 	m_position = pos;
 	VECTOR d = dir;
