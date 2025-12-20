@@ -22,7 +22,7 @@ bool GameManager::Initialize()
 	enemy.Initialize(VGet(0, 0, 50));
 	enemy.SetPlayer(&m_player);
 	enemy.SetBulletList(&m_bullets);
-	m_enemies.push_back(enemy);
+	m_enemies.push_back(move(enemy));
 
 	m_bullets.clear();
 
@@ -87,11 +87,6 @@ void GameManager::UpdateBullets(float deltaTime)
 
 void GameManager::CheckBulletHit()
 {
-
-	for(auto & b:m_bullets)
-	{
-
-	}
 
 	for (auto& b : m_bullets)
 	{

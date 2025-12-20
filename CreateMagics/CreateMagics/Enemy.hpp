@@ -30,8 +30,11 @@ public:
 		float attackRange = 15.0f,
 		float attackInterval = 2.0f);
 
+
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	void SetPlayer(Player* player);
 	void SetBulletList(vector<Bullet>* bullets);
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 	void Update(float deltaTime) override;
 	void Draw() const override;

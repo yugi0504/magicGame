@@ -131,5 +131,5 @@ void Enemy::ShootAtPlayer()
 
 	b.Spawn(myPos, dir, 15.0f, 3, BulletOwner::Enemy, 5.0f);
 
-	m_bullets->push_back(b);
+	m_bullets->push_back(move(b));
 }

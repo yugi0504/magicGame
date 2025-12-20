@@ -15,7 +15,7 @@ public:
 
 private:
 
-	const float EPSILON = 1e-8f;
+	static constexpr float EPSILON = 1e-8f;
 
 	VECTOR	m_position	= VGet(0, 0, 0);	// ˆÊ’u
 	VECTOR	m_velocity	= VGet(0, 0, 0);	// ‘¬“x
@@ -28,6 +28,13 @@ private:
 public:
 
 	Bullet();
+	~Bullet() = default;
+
+	Bullet(const Bullet&) = delete;
+	Bullet& operator=(const Bullet&) = delete;
+
+	Bullet(Bullet&&) noexcept = default;
+	Bullet& operator=(Bullet&&) noexcept = default;
 
 	//
 	void Spawn(const VECTOR& pos, const VECTOR& dir, float speed, int damage, BulletOwner owner, float lifeTime = 5.0f);

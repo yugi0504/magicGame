@@ -43,7 +43,7 @@ void Bullet::Update(float deltaTime)
 
 	m_lifeTime -= deltaTime;
 
-	if (m_lifeTime = 0.0f)
+	if (m_lifeTime <= 0.0f)
 	{
 		m_alive = false;
 	}
